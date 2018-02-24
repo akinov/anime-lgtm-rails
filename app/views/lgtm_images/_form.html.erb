@@ -1,0 +1,22 @@
+<%= form_with(model: lgtm_image, local: true) do |form| %>
+  <% if lgtm_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lgtm_image.errors.count, "error") %> prohibited this lgtm_image from being saved:</h2>
+
+      <ul>
+      <% lgtm_image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :lgtm_image_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

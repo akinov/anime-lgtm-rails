@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lgtm Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lgtm_images.each do |lgtm_image| %>
+      <tr>
+        <td><%= lgtm_image.url %></td>
+        <td><%= link_to 'Show', lgtm_image %></td>
+        <td><%= link_to 'Edit', edit_lgtm_image_path(lgtm_image) %></td>
+        <td><%= link_to 'Destroy', lgtm_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lgtm Image', new_lgtm_image_path %>
