@@ -13,9 +13,7 @@
   <tbody>
     <% @lgtm_images.each do |lgtm_image| %>
       <tr>
-        <td><%= lgtm_image.url %></td>
-        <td><%= link_to 'Show', lgtm_image %></td>
-        <td><%= link_to 'Edit', edit_lgtm_image_path(lgtm_image) %></td>
+        <td><%= image_tag lgtm_image.url %></td>
         <td><%= link_to 'Destroy', lgtm_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
